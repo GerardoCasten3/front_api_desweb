@@ -1,0 +1,157 @@
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #2676ed;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabla base */
+.materias-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.materias-table thead {
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: #ffffff;
+}
+
+.materias-table th,
+.materias-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.materias-table td {
+    border-bottom: 1px solid #e0e0e0;
+    color: #0e37aa;
+}
+
+
+.materias-table tbody tr:nth-child(even) {
+  background: #f4f6f8;
+}
+
+.materias-table tbody tr:hover {
+  background: #e3f2fd;
+  transition: background 0.3s ease;
+}
+
+/* Botones de acción */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-edit {
+  color: #1976d2;
+}
+
+.btn-delete {
+  color: #e53935;
+}
+
+.btn-edit:hover {
+  color: #0d47a1;
+  transform: scale(1.2);
+}
+
+.btn-delete:hover {
+  color: #b71c1c;
+  transform: scale(1.2);
+}
+
+/* --- Paginación --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.pagination-btn {
+  background: linear-gradient(90deg, #0d47a1, #1976d2);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.pagination-btn:hover {
+  background: linear-gradient(90deg, #1565c0, #1e88e5);
+  transform: scale(1.05);
+}
+
+.pagination-btn:disabled {
+  background: #b0bec5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.page-info {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .materias-table thead {
+    display: none;
+  }
+
+  .materias-table,
+  .materias-table tbody,
+  .materias-table tr,
+  .materias-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .materias-table tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .materias-table td {
+    text-align: right;
+    padding: 10px;
+    position: relative;
+  }
+
+  .materias-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #0d47a1;
+  }
+}
