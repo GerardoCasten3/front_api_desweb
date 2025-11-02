@@ -187,6 +187,7 @@ const Crear = () => {
             Compcenter Saltillo
           </a>
         </p>
+        <p>Desarrollado por <a href="https://github.com/GerardoCasten3" target="_blank" rel="noopener noreferrer">Gerardo Castillo</a></p>
       </div>
     </div>
   );
